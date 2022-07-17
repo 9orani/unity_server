@@ -17,7 +17,8 @@ namespace Gorani.Classroom {
     {
         private static bool s_enableHWCodec = false;
         private static SignalingType s_signalingType = SignalingType.WebSocket;
-        private static string s_signalingAddress = "127.0.0.1"; 
+        private static string s_signalingAddress = "118.67.133.166"; 
+        // private static string s_signalingAddress = "127.0.0.1"; 
         private static float s_signalingInterval = 5;
         private static bool s_signalingSecured = false;
 

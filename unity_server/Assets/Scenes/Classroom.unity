@@ -10023,6 +10023,11 @@ MonoBehaviour:
     urls:
     - stun:stun.l.google.com:19302
     username: 
+  - credential: gorani
+    credentialType: 0
+    urls:
+    - turn:112.185.185.213:3478?transport=tcp
+    username: gorani
   interval: 5
   hardwareEncoderSupport: 1
   handlers: []
