@@ -354,15 +354,51 @@ MonoBehaviour:
   m_Actions: {fileID: -944628639613478452, guid: 87f3af00c47a8ed4f920f01cd26616a3, type: 3}
   m_ActionEvents:
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5460578847355865203}
+        m_TargetAssemblyTypeName: Gorani.Classroom.PlayerController, Assembly-CSharp
+        m_MethodName: OnMovement
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 614a6024-f78c-4122-820a-d7086726ff53
     m_ActionName: PlayerControls/Movement[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5460578847355865203}
+        m_TargetAssemblyTypeName: Gorani.Classroom.PlayerController, Assembly-CSharp
+        m_MethodName: OnLook
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: ec3ecd2f-79d0-4cd5-b2f9-037070b4a646
     m_ActionName: PlayerControls/Look[/Mouse/delta]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5460578847355865203}
+        m_TargetAssemblyTypeName: Gorani.Classroom.PlayerController, Assembly-CSharp
+        m_MethodName: OnJump
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: fa192f1c-60dd-4f38-af83-178831c68ab1
     m_ActionName: PlayerControls/Jump[/Keyboard/space]
   m_DefaultActionMap: PlayerControls
@@ -399,8 +435,8 @@ MonoBehaviour:
   cameraPivot: {fileID: 1893352004192859353}
   playerInput: {fileID: 6101894575272002233}
   moveSpeed: 100
-  rotateSpeed: 50
-  jumpSpeed: 200
+  rotateSpeed: 20
+  jumpSpeed: 500
   label: {fileID: 4399031624317327734}
 --- !u!1 &4399031624821882285
 GameObject:

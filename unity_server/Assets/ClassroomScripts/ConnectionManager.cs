@@ -32,15 +32,11 @@ namespace Gorani.Classroom {
         }
 
         void SetUpHost(string username){
-            Debug.Log("SetUp Host"); 
 
-            var instance = GameObject.Instantiate(prefabHost);
+            var instance = GameObject.Instantiate(prefabHost);; 
             var handler = instance.GetComponent<Multiplay>();
-
-            // host player
             var hostPlayer = GameObject.Instantiate(prefabPlayer);
             
-            Debug.Log("host player instantiated"); 
             var playerController = hostPlayer.GetComponent<PlayerController>();
             playerController.SetLabel(username);
             var playerInput = hostPlayer.GetComponent<InputReceiver>();
@@ -52,12 +48,11 @@ namespace Gorani.Classroom {
                 hardwareEncoder: RenderStreamingSettings.EnableHWCodec,
                 signaling: RenderStreamingSettings.Signaling,
                 handlers: new SignalingHandlerBase[] { handler }
-                ); 
+            );   
         }
 
         IEnumerator SetUpGuest(string username, string connectionId)
         {
-            Debug.Log("SetUpGuest :)"); 
             var guestPlayer = GameObject.Instantiate(prefabGuest);
             var handler = guestPlayer.GetComponent<SingleConnection>();
 
@@ -73,12 +68,13 @@ namespace Gorani.Classroom {
 
             var channel = guestPlayer.GetComponent<MultiplayChannel>();
             channel.OnStartedChannel += _ => { StartCoroutine(ChangeLabel(channel, username)); };
-
+            
             // todo(kazuki):
             yield return new WaitForSeconds(1f);
 
             handler.CreateConnection(connectionId);
             yield return new WaitUntil(() => handler.IsConnected(connectionId));
+            
         }
 
         IEnumerator ChangeLabel(MultiplayChannel channel, string username)
