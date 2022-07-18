@@ -10020,9 +10020,12 @@ MonoBehaviour:
   iceServers:
   - credential: 
     credentialType: 0
-    urls:
-    - stun:stun.l.google.com:19302
+    urls: []
     username: 
+  - credential: gorani
+    credentialType: 0
+    urls: []
+    username: gorani
   interval: 5
   hardwareEncoderSupport: 1
   handlers: []
